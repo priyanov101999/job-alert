@@ -76,7 +76,7 @@ def format_md(items: List[Dict[str, Any]], window: str) -> str:
     return "\n".join(lines)
 
 def main() -> None:
-    targets = load_json("scripts/targets.json")
+    targets = load_json("targets.json")
     state = load_json(STATE_FILE) if os.path.exists(STATE_FILE) else {"seen": {}}
     seen: Dict[str, str] = state.setdefault("seen", {})
 
